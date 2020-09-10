@@ -43,6 +43,8 @@ console.log([10,20])    //数组直接量
 
 console.log("a")        //字符串直接量
 
+console.log('aa--\n--A9')        //字符串直接量，换行转义
+
 console.log('\xA9')        //字符串直接量，十六进制转义序列
 
 console.log('\u00A9')        //字符串直接量，Unicode 转义序列

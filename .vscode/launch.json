@@ -12,6 +12,8 @@
             "webRoot": "${workspaceFolder}"
             "file": "${workspaceFolder}"
         },
+
+
         {
             "type": "node",
             "request": "launch",
@@ -21,6 +23,5 @@
             ],
             "program": "${file}"
         }
-        
     ]
 }
