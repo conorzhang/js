@@ -1,0 +1,811 @@
+"use strict";            
+
+            
+//////////////////////////////////////////
+
+//语法内置属性（全局对象）
+//值属性
+window.Infinity
+window.NaN
+window.undefined
+window.globalThis
+//基本对象
+window.Object
+window.Function
+window.Boolean
+window.Symbol
+//错误对象
+window.Error
+//数字和日期
+window.Number
+window.Math
+window.Date
+//文本处理
+window.String
+window.RegExp
+//数组
+window.Array
+//使用键的集合对象
+window.Map
+window.Set
+window.WeakMap
+window.WeakSet
+//结构化数据
+window.JSON
+//控制抽象化
+window.Promise
+//反射
+window.Reflect    
+window.Proxy
+//国际化
+window.Intl
+//加载管理 WebAssembly 代码
+window.WebAssembly
+//语法内置方法（全局对象），省略window，后加（）
+window.eval
+window.isFinite
+window.isNaN
+window.parseFloat
+window.parseInt
+window.decodeURI
+window.decodeURIComponent
+window.encodeURI
+window.encodeURIComponent
+
+
+//bom对象
+window.Window
+    //window对象属性
+    window.closed
+    window.console          // 、、global
+    window.customElements
+    window.crypto           // 、、global
+    window.devicePixelRatio
+    window.document
+    window.event
+    window.frameElement
+    window.frames
+    window.history
+    window.innerHeight
+    window.innerWidth
+    window.isSecureContext
+    window.length
+    window.location
+    window.locationbar
+    window.localStorage
+    window.menubar
+    window.name
+    window.navigator
+    window.opener
+    window.outerHeight
+    window.outerWidth
+    window.pageXOffset
+    window.pageYOffset
+    window.parent
+    window.performance
+    window.personalbar
+    window.screen
+    window.screenLeft
+    window.screenTop
+    window.screenX
+    window.screenY
+    window.scrollbars
+    window.scrollX
+    window.scrollY
+    window.self
+    window.sessionStorage
+    window.speechSynthesis
+    window.status
+    window.statusbar
+    window.toolbar
+    window.top
+    window.window
+    //window对象方法，后带()，内置方法为黄色，非内置命名为蓝色，但是非内置命名加（）则变成黄色
+    //浏览器window内置属性（全局函数）
+    window.alert
+    window.blur
+    window.cancelAnimationFrame
+    window.clearInterval
+    window.clearTimeout
+    window.close
+    window.confirm
+    window.focus
+    window.getComputedStyle
+    window.getSelection
+    window.matchMedia
+    window.moveBy
+    window.moveTo
+    window.open
+    window.postMessage
+    window.print
+    window.prompt
+    window.requestAnimationFrame
+    window.resizeBy
+    window.resizeTo
+    window.scroll
+    window.scrollBy
+    window.scrollTo
+    window.setInterval
+    window.setTimeout
+    window.stop
+    //window事件句柄
+    window.ondevicelight
+    window.ondevicemotion
+    window.ondeviceorientation
+    window.onrejectionhandled
+    window.onvrdisplayconnect
+    window.onvrdisplaydisconnect
+    window.onvrdisplayactivate
+    window.onvrdisplaydeactivate
+    window.onvrdisplayblur
+    window.onvrdisplayfocus
+    window.onvrdisplaypresentchange
+    window.ondeviceorientationabsolute
+    //window事件   
+    //资源事件                            
+    window.addEventListener('error')
+    window.addEventListener('abort')
+    window.addEventListener('load')
+    window.addEventListener('beforeunload')
+    window.addEventListener('unload')
+    //网络事件
+    window.addEventListener('online')
+    window.addEventListener('offline')
+    //焦点事件
+    window.addEventListener('focus')
+    window.addEventListener('blur')
+    //WebSocket 事件
+    window.addEventListener('message')
+    window.addEventListener('error') 
+    window.addEventListener('close')
+    //会话历史事件
+    window.addEventListener('pagehide')
+    window.addEventListener('pageshow')
+    window.addEventListener('popstate')
+    //CSS 动画事件 
+    window.addEventListener('animationstart')
+    window.addEventListener('animationend')
+    window.addEventListener('animationiteration')
+    //CSS 过渡事件
+    window.addEventListener('transitionstart') 
+    window.addEventListener('transitioncancel')
+    window.addEventListener('transitionend')
+    window.addEventListener('transitionrun')
+    //表单事件
+    window.addEventListener('reset') 
+    window.addEventListener('submit')
+    //打印事件
+    window.addEventListener('beforeprint')
+    window.addEventListener('afterprint')
+    //键盘事件
+    window.addEventListener('resize') 
+    window.addEventListener('scroll')
+    window.addEventListener('keydown')
+    window.addEventListener('keypress')
+    window.addEventListener('keyup') 
+    //鼠标事件
+    window.addEventListener('auxclick') 
+    window.addEventListener('click') 
+    window.addEventListener('contextmenu') 
+    window.addEventListener('dblclick') 
+    window.addEventListener('mousedown') 
+    window.addEventListener('mouseenter') 
+    window.addEventListener('mouseleave') 
+    window.addEventListener('mousemove') 
+    window.addEventListener('mouseover') 
+    window.addEventListener('mouseout') 
+    window.addEventListener('mouseup') 
+    window.addEventListener('select') 
+    window.addEventListener('wheel') 
+    //拖放事件
+    window.addEventListener('drag') 
+    window.addEventListener('dragend') 
+    window.addEventListener('dragenter') 
+    window.addEventListener('dragstart') 
+    window.addEventListener('dragleave') 
+    window.addEventListener('dragover') 
+    window.addEventListener('drop')
+    //媒体事件
+    window.addEventListener('canplay') 
+    window.addEventListener('canplaythrough') 
+    window.addEventListener('durationchange') 
+    window.addEventListener('emptied') 
+    window.addEventListener('ended') 
+    window.addEventListener('loadeddata') 
+    window.addEventListener('loadedmetadata') 
+    window.addEventListener('pause') 
+    window.addEventListener('play') 
+    window.addEventListener('playing') 
+    window.addEventListener('ratechange') 
+    window.addEventListener('seeked') 
+    window.addEventListener('seeking') 
+    window.addEventListener('stalled') 
+    window.addEventListener('suspend') 
+    window.addEventListener('timeupdate') 
+    window.addEventListener('volumechange') 
+    window.addEventListener('waiting') 
+    //进度事件
+    window.addEventListener('abort') 
+    window.addEventListener('error') 
+    window.addEventListener('load') 
+    window.addEventListener('loadstart') 
+    window.addEventListener('progress')
+    //存储事件
+    window.addEventListener('change')
+    window.addEventListener('storage')
+    //值变化事件
+    window.addEventListener('hashchange')
+    window.addEventListener('input')
+    window.addEventListener('readystatechange')
+    //未分类的事件
+    window.addEventListener('invalid')
+    window.addEventListener('message')                           
+    //////////////////events大全。非必读，作查阅参考。
+    window.addEventListener('error')
+    window.addEventListener('languagechange')
+    window.addEventListener('orientationchange')
+    window.addEventListener('devicemotion')
+    window.addEventListener('deviceorientation')
+    window.addEventListener('resize')
+    window.addEventListener('storage')
+    //Animation events
+    window.addEventListener('animationcancel')
+    window.addEventListener('animationend')
+    window.addEventListener('animationiteration')
+    window.addEventListener('animationstart')
+    //Connection events
+    window.addEventListener('offline')
+    window.addEventListener('online')
+    //Focus events
+    window.addEventListener('blur')
+    window.addEventListener('focus')
+    //History events
+    window.addEventListener('hashchange')
+    window.addEventListener('pagehide')
+    window.addEventListener('pageshow')
+    window.addEventListener('popstate')
+    //Load & unload events
+    window.addEventListener('beforeunload')
+    window.addEventListener('load')
+    window.addEventListener('unload')
+    //Messaging events
+    window.addEventListener('message')
+    window.addEventListener('messageerror')
+    //Print events
+    window.addEventListener('afterprint')
+    window.addEventListener('beforeprint')
+    //Promise rejection events
+    window.addEventListener('rejectionhandled')
+    window.addEventListener('unhandledrejection')
+    //Transition events
+    window.addEventListener('transitioncancel')
+    window.addEventListener('transitionend')
+    window.addEventListener('transitionrun')
+    window.addEventListener('transitionstart')
+    //WebVR events
+    window.addEventListener('vrdisplayactivate')
+    window.addEventListener('vrdisplayblur')
+    window.addEventListener('vrdisplayconnect')
+    window.addEventListener('vrdisplaydeactivate')
+    window.addEventListener('vrdisplaydisconnect')
+    window.addEventListener('vrdisplayfocus')
+    window.addEventListener('vrdisplaypointerrestricted')
+    window.addEventListener('vrdisplaypointerunrestricted')
+    window.addEventListener('vrdisplaypresentchange')        
+window.Navigator     
+    //完整写法：window.navigator.appCodeName
+    //标准属性
+    navigator.activeVRDisplays
+    navigator.appCodeName
+    navigator.appName
+    navigator.appVersion
+    navigator.cookieEnabled
+    navigator.geolocation
+    navigator.hardwareConcurrency
+    navigator.language
+    navigator.mimeTypes
+    navigator.maxTouchPoints
+    navigator.onLine
+    navigator.permissions
+    navigator.platform
+    navigator.plugins
+    navigator.product
+    navigator.serviceWorker
+    navigator.storage
+    navigator.userAgent
+    navigator.webdriver
+    //标准方法
+    navigator.getVRDisplays
+    navigator.getUserMedia
+    navigator.registerProtocolHandler
+    navigator.requestMediaKeySystemAccess
+    navigator.sendBeacon
+    navigator.share
+    navigator.vibrate
+window.Screen
+    //标准属性
+    screen.availHeight
+    screen.availWidth
+    screen.colorDepth
+    screen.height
+    screen.orientation
+    screen.pixelDepth
+    screen.width
+window.History
+    //标准属性
+    history.length
+    history.state
+    //标准方法
+    history.back
+    history.forward
+    history.go
+    history.pushState
+    history.replaceState
+window.Location
+    //标准属性
+    location.origin
+    //标准方法
+    location.assign
+    location.reload
+    location.replace
+    location.toString
+
+
+//dom对象
+window.Document
+    //document属性
+    document.all
+    document.anchors
+    document.characterSet
+    document.compatMode
+    document.contentType
+    document.doctype
+    document.documentElement
+    document.documentURI
+    document.embeds
+    document.forms
+    document.head
+    document.hidden
+    document.images
+    document.implementation
+    document.links
+    document.plugins
+    document.scripts
+    document.scrollingElement
+    document.timeline
+    document.visibilityState
+    document.childElementCount
+    document.children
+    document.firstElementChild
+    document.lastElementChild
+    //HTMLdocument扩展
+    document.defaultView
+    document.lastModified
+    document.readyState
+    document.referrer
+    document.URL
+    //DocumentOrShadowRoot 包含的属性
+    document.activeElement
+    document.fullscreenElement
+    document.pointerLockElement
+    document.styleSheets
+    //Event handlers
+    document.oncopy
+    document.oncut
+    document.onfullscreenchange
+    document.onfullscreenerror
+    document.onpaste
+    document.onreadystatechange
+    document.onselectionchange
+    document.onvisibilitychange
+    document.onabort
+    document.onanimationcancel
+    document.onanimationend
+    document.onanimationiteration
+    document.onanimationstart
+    document.onauxclick
+    document.onblur
+    document.onerror
+    document.onfocus
+    document.oncancel
+    document.oncanplay
+    document.oncanplaythrough
+    document.onchange
+    document.onclick
+    document.onclose
+    document.oncontextmenu
+    document.oncuechange
+    document.ondblclick
+    document.ondrag
+    document.ondragend
+    document.ondragenter
+    document.ondragexit
+    document.ondragleave
+    document.ondragover
+    document.ondragstart
+    document.ondrop
+    document.ondurationchange
+    document.onemptied
+    document.onended
+    document.ongotpointercapture
+    document.oninput
+    document.oninvalid
+    document.onkeydown
+    document.onkeypress
+    document.onkeyup
+    document.onload
+    document.onloadeddata
+    document.onloadedmetadata
+    document.onloadstart
+    document.onlostpointercapture
+    document.onmousedown
+    document.onmouseenter
+    document.onmouseleave
+    document.onmousemove
+    document.onmouseout
+    document.onmouseover
+    document.onmouseup
+    document.onwheel
+    document.onpaste
+    document.onplay
+    document.onplaying
+    document.onpointerdown
+    document.onpointermove
+    document.onpointerup
+    document.onpointerover
+    document.onpointerout
+    document.onpointerenter
+    document.onpointerleave
+    document.onpointerlockchange 
+    document.onpointerlockerror 
+    document.onprogress
+    document.onratechange
+    document.onreset
+    document.onresize
+    document.onscroll
+    document.onseeked
+    document.onseeking
+    document.onselect
+    document.onselectstart
+    document.onselectionchange
+    document.onstalled
+    document.onsubmit
+    document.onsuspend
+    document.ontimeupdate
+    document.onvolumechange
+    document.ontouchcancel  
+    document.ontouchend  
+    document.ontouchmove  
+    document.ontouchstart  
+    document.ontransitioncancel
+    document.ontransitionend
+    document.ontransitionrun
+    document.ontransitionstart
+    document.onwaiting
+    //document方法
+    document.adoptNode
+    document.caretRangeFromPoint
+    document.createAttribute
+    document.createAttributeNS
+    document.createCDATASection
+    document.createComment
+    document.createDocumentFragment
+    document.createElement
+    document.createElementNS
+    document.createEvent
+    document.createNodeIterator
+    document.createProcessingInstruction
+    document.createRange
+    document.createTextNode
+    document.createTreeWalker
+    document.exitPointerLock
+    document.getAnimations
+    document.getElementsByClassName
+    document.getElementsByTagName
+    document.getElementsByTagNameNS
+    document.importNode
+    document.getElementById
+    document.querySelector
+    document.querySelectorAll
+    document.createExpression
+    document.createNSResolver
+    document.evaluate
+    //document方法-HTML扩展
+    document.close
+    document.execCommand
+    document.getElementsByName
+    document.hasFocus
+    document.open
+    document.queryCommandEnabled
+    document.queryCommandIndeterm
+    document.queryCommandState
+    document.queryCommandSupported
+    document.queryCommandValue
+    document.write
+    document.writeln
+    //Methods included from DocumentOrShadowRoot
+    document.getSelection
+    document.elementFromPoint
+    document.elementsFromPoint
+    document.caretPositionFromPoint
+window.Attr
+window.CharacterData    
+window.Comment
+window.CustomEvent
+window.DocumentFragment
+window.DocumentType
+window.DOMException
+window.DOMImplementation
+window.DOMSettableTokenList
+window.DOMStringList
+window.DOMTokenList
+window.Element
+window.Event
+    //属性
+    event.bubbles
+    event.cancelable 
+    event.composed 
+    event.currentTarget 
+    event.defaultPrevented 
+    event.eventPhase 
+    event.srcElement 
+    event.target
+    event.timeStamp 
+    event.isTrusted 
+    //方法
+    event.composedPath
+    event.preventDefault
+    event.stopImmediatePropagation
+    event.stopPropagation             
+window.EventTarget
+window.HTMLCollection
+window.MutationObserver
+window.MutationRecord
+window.Node
+window.NodeIterator
+window.NodeList
+window.ProcessingInstruction       
+window.Promise
+window.Range
+window.Text
+window.TreeWalker
+window.URL
+window.Window       
+window.Worker
+window.XMLDocument
+//HTML接口
+window.HTMLAnchorElement
+window.HTMLAppletElement
+window.HTMLAreaElement
+window.HTMLAudioElement       
+window.HTMLBaseElement
+window.HTMLBodyElement
+window.HTMLBRElement
+window.HTMLButtonElement
+window.HTMLCanvasElement
+window.HTMLDataElement
+window.HTMLDataListElement
+window.HTMLDirectoryElement
+window.HTMLDivElement
+window.HTMLDListElement
+window.HTMLElement
+window.HTMLEmbedElement
+window.HTMLFieldSetElement
+window.HTMLFontElement
+window.HTMLFormElement
+window.HTMLFrameElement
+window.HTMLFrameSetElement
+window.HTMLHeadElement
+window.HTMLHeadingElement
+window.HTMLHtmlElement
+window.HTMLHRElement
+window.HTMLIFrameElement
+window.HTMLImageElement
+window.HTMLInputElement
+window.HTMLLabelElement
+window.HTMLLegendElement
+window.HTMLLIElement
+window.HTMLLinkElement
+window.HTMLMapElement
+window.HTMLMediaElement
+window.HTMLMenuElement
+window.HTMLMetaElement
+window.HTMLMeterElement
+window.HTMLModElement
+window.HTMLObjectElement
+window.HTMLOListElement
+window.HTMLOptGroupElement
+window.HTMLOptionElement
+window.HTMLOutputElement
+window.HTMLParagraphElement
+window.HTMLParamElement
+window.HTMLPreElement
+window.HTMLProgressElement
+window.HTMLQuoteElement
+window.HTMLScriptElement
+window.HTMLSelectElement
+window.HTMLSourceElement
+window.HTMLSpanElement
+window.HTMLStyleElement
+window.HTMLTableElement
+window.HTMLTableCaptionElement
+window.HTMLTableCellElement
+window.HTMLTableDataCellElement
+window.HTMLTableHeaderCellElement
+window.HTMLTableColElement
+window.HTMLTableRowElement
+window.HTMLTableSectionElement
+window.HTMLTextAreaElement
+window.HTMLTimeElement
+window.HTMLTitleElement
+window.HTMLTrackElement
+window.HTMLUListElement
+window.HTMLUnknownElement
+window.HTMLVideoElement
+window.CanvasRenderingContext2D
+window.CanvasGradient
+window.CanvasPattern
+window.TextMetrics
+window.ImageData
+window.HTMLAllCollection
+window.HTMLFormControlsCollection
+window.HTMLOptionsCollection
+window.DOMStringMap
+window.RadioNodeList
+window.MediaError
+//SVG 元素接口
+SVGAElement
+SVGAnimationElement
+SVGAnimateElement
+SVGAnimateMotionElement
+SVGAnimateTransformElement
+SVGCircleElement
+SVGClipPathElement
+SVGComponentTransferFunctionElement
+SVGCursorElement
+SVGDefsElement
+SVGDescElement
+SVGElement
+SVGEllipseElement
+SVGFEBlendElement
+SVGFEColorMatrixElement
+SVGFEComponentTransferElement
+SVGFECompositeElement
+SVGFEConvolveMatrixElement
+SVGFEDiffuseLightingElement
+SVGFEDisplacementMapElement
+SVGFEDistantLightElement
+SVGFEFloodElement
+SVGFEGaussianBlurElement
+SVGFEImageElement
+SVGFEMergeElement
+SVGFEMergeNodeElement
+SVGFEMorphologyElement
+SVGFEOffsetElement
+SVGFEPointLightElement
+SVGFESpecularLightingElement
+SVGFESpotLightElement
+SVGFETileElement
+SVGFETurbulenceElement
+SVGFEFuncRElement
+SVGFEFuncGElement
+SVGFEFuncBElement
+SVGFEFuncAElement
+SVGFilterElement
+SVGForeignObjectElement
+SVGGElement
+SVGGradientElement
+SVGImageElement
+SVGLinearGradientElement
+SVGLineElement
+SVGMarkerElement
+SVGMaskElement
+SVGMetadataElement
+SVGPathElement
+SVGPatternElement
+SVGPolylineElement
+SVGPolygonElement
+SVGRadialGradientElement
+SVGRectElement
+SVGScriptElement
+SVGStopElement
+SVGStyleElement
+SVGSVGElement
+SVGSwitchElement
+SVGSymbolElement
+SVGTextElement
+SVGTextPathElement
+SVGTitleElement
+SVGTSpanElement
+SVGUseElement
+SVGViewElement
+//SVG 数据类型接口
+//Static type
+SVGAngle
+SVGElementInstance
+SVGElementInstanceList
+SVGLength
+SVGLengthList
+SVGMatrix
+SVGNumber
+SVGNumberList
+SVGPoint
+SVGPointList
+SVGPreserveAspectRatio
+SVGRect
+SVGStringList
+SVGTransform
+SVGTransformList
+//Animated type
+SVGAnimatedAngle
+SVGAnimatedBoolean
+SVGAnimatedEnumeration
+SVGAnimatedInteger
+SVGAnimatedLength
+SVGAnimatedLengthList
+SVGAnimatedNumber
+SVGAnimatedNumberList
+SVGAnimatedPreserveAspectRatio
+SVGAnimatedRect
+SVGAnimatedString
+SVGAnimatedTransformList
+//SVG 路径段接口
+SVGPathSegList
+SVGPathSeg
+SVGPathSegArcAbs
+SVGPathSegArcRel
+SVGPathSegClosePath
+SVGPathSegCurvetoCubicAbs
+SVGPathSegCurvetoCubicRel
+SVGPathSegCurvetoCubicSmoothAbs
+SVGPathSegCurvetoCubicSmoothRel
+SVGPathSegCurvetoQuadraticAbs
+SVGPathSegCurvetoQuadraticRel
+SVGPathSegCurvetoQuadraticSmoothAbs
+SVGPathSegCurvetoQuadraticSmoothRel
+SVGPathSegLinetoAbs
+SVGPathSegLinetoHorizontalAbs
+SVGPathSegLinetoHorizontalRel
+SVGPathSegLinetoRel
+SVGPathSegLinetoVerticalAbs
+SVGPathSegLinetoVerticalRel
+SVGPathSegMovetoAbs
+SVGPathSegMovetoRel
+
+
+
+
+
+//////////////////////////////////////////
+//示例
+window.document.write("hello"+"<br>")
+a = function(){
+    // window.alert("hello world"+"<br>")
+    return 345;
+};
+a(123)
+
+//非内置错误写法
+/*             
+window.aabb
+window.123123
+window.true
+window."3333"
+window.{asdasd}
+window.[asdasd]
+window.(asdasd)
+window.<asdasd>
+window.$aeqwa
+window.${asdasd}
+window./asdasdasd/ig
+window.null
+window.var cc=12
+var cc=12
+window.cc
+function dd(){return cc;}
+window.dd()
+*/
+
+
+
+
