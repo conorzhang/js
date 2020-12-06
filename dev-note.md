@@ -75,6 +75,8 @@ apt install mysql-server
 安装失败就再来一遍
 启动mysql服务器
 service mysql start
+查看运行状态
+service mysqld status 
 查看默认账户名密码
 cat /etc/mysql/debian.cnf
 进入默认账户
