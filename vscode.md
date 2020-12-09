@@ -20,9 +20,3 @@ cmd ↑/↓/←/→              same as above                            同上
 ctr pgup/pgdn            scroll line up/down                      上下翻行
 cmd pgup/pgdn            scroll page up/down                      上下翻页
 opt cmd ]/[              fold/unfold region                        浙大
-
-{
-
-
-asdasdasdasd
-}
