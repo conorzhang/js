@@ -4,13 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/resource/SyntaxHighlighter/css/shThemeDefault.css">
+    <link rel="stylesheet" type="text/css" href="/resource/SyntaxHighlighter/css/shCore.css">
+    <script class="javascript" src="/resource/SyntaxHighlighter/shCore.js"></script>  
+    <script class="javascript" src="/resource/SyntaxHighlighter/shBrushCSharp.js"></script>  
+    <script class="javascript" src="/resource/SyntaxHighlighter/shBrushPhp.js"></script>  
+    <script class="javascript" src="/resource/SyntaxHighlighter/shBrushJScript.js"></script>  
+    <script class="javascript" src="/resource/SyntaxHighlighter/shBrushJava.js"></script>  
+    <script class="javascript" src="/resource/SyntaxHighlighter/shBrushVb.js"></script>  
+    <script class="javascript" src="/resource/SyntaxHighlighter/shBrushSql.js"></script>  
+    <script class="javascript" src="/resource/SyntaxHighlighter/shBrushXml.js"></script>  
+    <script class="javascript" src="/resource/SyntaxHighlighter/shBrushDelphi.js"></script>  
+    <script class="javascript" src="/resource/SyntaxHighlighter/shBrushPython.js"></script>  
+    <script class="javascript" src="/resource/SyntaxHighlighter/shBrushRuby.js"></script>  
+    <script class="javascript" src="/resource/SyntaxHighlighter/shBrushCss.js"></script>  
+    <script class="javascript" src="/resource/SyntaxHighlighter/shBrushCpp.js"></script>  
 </head>
 <body>
     <h1 id="title"></h1>
+    <pre>
+        <code class="javascript">
+            <div id="view"></div>
+        </code>
+    </pre>
+
     <div id="view"></div>
+
+    <pre name="code" id="view" class="brush: js; gutter: false;">
+        function foo() {
+            var i = 3;
+        }
+        let a;
+        const b;
+        var c;
+
+    </pre>
+
+    <script type="syntaxhighlighter" class="brush: js">
+        <![CDATA[
+      /**
+       * SyntaxHighlighter
+       */
+          function foo() {
+              if (counter <= 10)
+                  return;
+              // it works!
+          }
+        ]]>
+        <div id="view"></div>
+    </script>
+
+
     <script>
         document.getElementById('title').innerHTML='JS code';
     </script>
     <script src="/server.js"></script>
+
+
+    <script type="text/javascript">
+        SyntaxHighlighter.all()
+    </script>
+
+    <script type="text/javascript">
+        SyntaxHighlighter.defaults['toolbar'] = false;//用于去除syntaxHighlighter的帮助工具：toolbar
+        SyntaxHighlighter.all(); 
+    </script> 
+
 </body>
 </html>
+
+
+

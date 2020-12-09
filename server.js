@@ -29,6 +29,16 @@ function jsCode(){
     var a_tostr=a.toString();
     var a_arr = a.split(" ");
     console.log(a_tostr, '\n', a_arr);
+    let b = 12;
+    const c = true;
+    if (condition) {
+        a++
+    } else {
+        ++a
+    }
+    function name(params) {
+        return null;
+    }
     //ni shuo ni shi hao ren 
     //[ 'ni', 'shuo', 'ni', 'shi', 'hao', 'ren' ]
 }
