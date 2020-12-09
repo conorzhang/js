@@ -52,7 +52,12 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub username@remote-server
 
 ## ubuntu镜像
 运行镜像
-docker run -it --net host --name ubuntu -v /mnt/c/Users/dauab/docker-file:/root -w /root conorzhang/ubu-node-express-mysql:04-10-4-8-v0
+mac: 
+docker run -itd --net host --name ubuntu -v /Users/conor/git:/root -w /root conorzhang/ubu-node-express-mysql:04-10-4-8-v0
+win:
+docker run -itd --net host --name ubuntu -v /mnt/c/Users/dauab/docker-file:/root -w /root conorzhang/ubu-node-express-mysql:04-10-4-8-v0
+增加重启动
+docker update --restart=always ubuntu
 提交镜像
 docker commit ubu-container ubu-docker:v1
 存出镜像
@@ -90,7 +95,7 @@ quit;
 mysql -h localhost -P 3306 -uroot -p123456
 
 ## adminer镜像
-docker run -it --net host --name adminer -e ADMINER_DEFAULT_SERVER=mysql -v /mnt/c/Users/dauab/docker-file:/root -w /root conorzhang/11adminer:4.7.7
+docker run -it -p 8888:8080 --name adminer -e ADMINER_DEFAULT_SERVER=mysql -v /mnt/c/Users/dauab/docker-file:/root -w /root conorzhang/11adminer:4.7.7
 进入容器，在远程连接功能栏，手动转发端口8080
 打开默认客户端连接http://127.0.0.1:8080
 系统：mysql
